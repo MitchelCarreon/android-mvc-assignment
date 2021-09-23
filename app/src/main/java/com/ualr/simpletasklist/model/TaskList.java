@@ -59,7 +59,12 @@ public class TaskList {
     //  corresponding task as done.
 
     public void markDone(int taskID){
-        this.tasks.get(taskID).setTaskDone(true);
+        try {
+            this.tasks.get(taskID).setTaskDone(true);
+        }
+        catch (Exception e){
+            return;
+        }
     }
 
 }
